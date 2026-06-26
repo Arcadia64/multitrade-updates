@@ -1,6 +1,6 @@
 [package]
 name = "multitrade"
-version = "0.4.0"
+version = "0.4.1"
 description = "MultiTrade - Multi-Broker Trading App"
 authors = ["MultiTrade"]
 edition = "2021"

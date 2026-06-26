@@ -211,7 +211,7 @@
                 </div>
                 <div class="account-stat">
                   <span class="label">Cash:</span>
-                  <span class="value">${{ formatNumber(getAccountCash(account.id)?.balance?.canTrade || 0) }}</span>
+                  <span class="value">${{ formatNumber(getAccountCash(account.id)?.balance?.canWithdraw || 0) }}</span>
                 </div>
               </div>
 
@@ -526,7 +526,7 @@ export default {
         
         // Add cash balance
         if (accountCash.value[account.id] && accountCash.value[account.id].balance) {
-          total += Number(accountCash.value[account.id].balance.canTrade) || 0;
+          total += Number(accountCash.value[account.id].balance.canWithdraw) || 0;
         }
       });
       
@@ -538,7 +538,7 @@ export default {
       
       accounts.value.forEach(account => {
         if (accountCash.value[account.id] && accountCash.value[account.id].balance) {
-          total += Number(accountCash.value[account.id].balance.canTrade) || 0;
+          total += Number(accountCash.value[account.id].balance.canWithdraw) || 0;
         }
       });
       
@@ -681,7 +681,7 @@ export default {
 
         // Add cash balance
         if (accountCash.value[account.id] && accountCash.value[account.id].balance) {
-          total += Number(accountCash.value[account.id].balance.canTrade) || 0;
+          total += Number(accountCash.value[account.id].balance.canWithdraw) || 0;
         }
       });
 
@@ -717,7 +717,7 @@ export default {
       
       // Add cash balance
       if (accountCash.value[accountId] && accountCash.value[accountId].balance) {
-        total += Number(accountCash.value[accountId].balance.canTrade) || 0;
+        total += Number(accountCash.value[accountId].balance.canWithdraw) || 0;
       }
       
       return total;
