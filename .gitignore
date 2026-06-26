@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+
+# Frontend build output
+dist/
+
+# Rust build artifacts
+src-tauri/target/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+
+# Logs
+cargo_errors.txt
+
+# Credential store
+multitrade_credentials.json
+
+# Claude Code
+.claude/
+
+# Tauri WiX/NSIS build intermediates
+src-tauri/target/
+
+# Tauri updater signing keys (never commit)
+src-tauri/.tauri/
+
+# Build script with signing password
+build-signed.bat

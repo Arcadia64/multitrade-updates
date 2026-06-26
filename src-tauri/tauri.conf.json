@@ -1,0 +1,55 @@
+{
+  "$schema": "https://raw.githubusercontent.com/tauri-apps/tauri/dev/crates/tauri-config-schema/schema.json",
+  "productName": "MultiTrade",
+  "version": "0.4.0",
+  "identifier": "com.multitrade.app",
+  "build": {
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:1420",
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build"
+  },
+  "app": {
+    "withGlobalTauri": false,
+    "windows": [
+      {
+        "title": "MultiTrade",
+        "width": 1000,
+        "height": 700,
+        "minWidth": 900,
+        "minHeight": 625
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src ipc: http://ipc.localhost https://accounts.fennel.com https://fennel-api.prod.fennel.com https://api.robinhood.com https://api.public.com https://api.tastyworks.com https://api.webull.com"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "createUpdaterArtifacts": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "windows": {
+      "nsis": {
+        "installerIcon": "icons/icon.ico",
+        "installMode": "currentUser",
+        "installerHooks": "nsis/hooks.nsh"
+      }
+    }
+  },
+  "plugins": {
+    "stronghold": {},
+    "updater": {
+      "endpoints": [
+        "https://github.com/Arcadia64/multitrade-updates/releases/latest/download/latest.json"
+      ],
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDA1NEMwNEIyNTE5N0E4MzQKUldRMHFKZFJzZ1JNQlUzSFQ3QkhUUzJvUHZxOUZieVZNa0hiSDBKcW9WOE56cW0yN2gya3RWVFEK"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nicegoodthings/nicegoodthings.github.io/refs/heads/main/schemas/capabilities.json",
+  "identifier": "default",
+  "description": "Default capabilities for MultiTrade",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "stronghold:default",
+    "shell:allow-open",
+    "updater:default"
+  ]
+}
